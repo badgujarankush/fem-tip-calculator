@@ -39,22 +39,24 @@ function setFromInput(num,element){
         document.querySelector(".tipbtn.active")?.classList.remove("active");
         t=num.target.value;
         console.log(t," tip was selected")
+        
     }else if(element==='bill'){
         billAmount = num.target.value;
         console.log(billAmount," billAmount was selected")
     }
     else{
         peopleNo = num.target.value;
-        console.log(peopleNo," no. of people was selected")
+        console.log(peopleNo," no. of people was selected");
+        calculate();
     }
-    calculate();
+    
 
 };
 
 function reset(){
     tipInput.value="";
     billInput.value="";
-    peopleInput.value="";
+    peopleInput.value="1";
     t=0;
     peopleNo=1;
     billAmount=0;
